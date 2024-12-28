@@ -1,4 +1,4 @@
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar";
 import HomePage from "./components/Home";
 import SignUpPage from "./components/Signup";
 import LoginPage from "./components/Login";
