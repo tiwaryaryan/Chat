@@ -120,7 +120,7 @@ export const useAuth = create((set, get) => ({
         //console.log("authUser:", authUser, "socket:", socket);
         if (!authUser || (socket && socket.connected)) return;
     
-        const newSocket = io("http://localhost:3001" , {
+        const newSocket = io("https://chat-app-backend-zhsl.onrender.com" , {
           query: {
             userId: authUser._id,
           }
