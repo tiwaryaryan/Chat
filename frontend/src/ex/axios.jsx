@@ -1,7 +1,7 @@
 import axios from "axios";
 
 export const axiosInstance = axios.create({
-  baseURL:  "http://localhost:3001/",  //making requests to apis
+  baseURL:  "https://chat-app-backend-zhsl.onrender.com/",  //making requests to apis
   withCredentials: true,  //this will send the cookie or jwt token with it also
 });
 
