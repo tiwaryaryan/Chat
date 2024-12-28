@@ -22,7 +22,7 @@ const MONGODB = process.env.MONGODB;
 // app.use(bodyParser.json());
 app.use(
     cors({
-        origin: "https://chat-app-frontend2-mx9e.onrender.com", // Replace with the frontend URL
+        origin: "https://chat-app-frontend-qxkg.onrender.com", // Replace with the frontend URL
         credentials: true, // Allow cookies to be sent
       })
 );         //for accessing data from different ports
