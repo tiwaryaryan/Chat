@@ -52,6 +52,7 @@ const generatetoken = (userId, res) => {
         maxAge: 1 * 24 * 60 * 60 * 1000,//it is in millisecond (1 days)
         httpOnly: true,     //prevents XSS attack
         sameSite: "None",  //prevents CSRF attacks
+        secure: true,
     });
 
     // console.log(token);
