@@ -51,7 +51,7 @@ const generatetoken = (userId, res) => {
     res.cookie("jwt", token, {
         maxAge: 1 * 24 * 60 * 60 * 1000,//it is in millisecond (1 days)
         httpOnly: true,     //prevents XSS attack
-        sameSite: "Strict",  //prevents CSRF attacks
+        sameSite: "None",  //prevents CSRF attacks
     });
 
     // console.log(token);
