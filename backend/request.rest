@@ -1,0 +1,10 @@
+get  http://localhost:3001/auth/check
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NzY0MWI1MTNiOTUxMGQxOTZiNjBkYmYiLCJpYXQiOjE3MzUxMTUwMTgsImV4cCI6MTczNTIwMTQxOH0.1GaB6etdoagpitPNDPT9BFKP-i7PaUew5dqOHhTewQI
+
+{
+    
+    "email": "abcd@gmail.com",
+    "password": "12345678"
+}
+
