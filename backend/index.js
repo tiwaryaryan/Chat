@@ -55,8 +55,8 @@ const generatetoken = (userId, res) => {
         secure: true,
     });
 
-    // console.log(token);
-    // console.log(res.cookie);
+     console.log(token);
+     console.log(res.cookie);
 };
 
 const verifyJWT = async (req, res, next) => {
