@@ -65,15 +65,15 @@ const verifyJWT = async (req, res, next) => {
         console.log("token2: " , token);
 
         if (!token) {
-            return res.status(401).json({ error: "No access token" })
             console.log("no token sirrr!")
+            return res.status(401).json({ error: "No access token" })
         }
 
         const decoded = jwt.verify(token, process.env.MY_JWT_ACCESS);  //decoded contains the payload that has userid with it
 
         if (!decoded) {
-            return res.status(401).json({ message: "Unauthorized - Invalid Token" });
             console.log("Unauthorized - Invalid Token");
+            return res.status(401).json({ message: "Unauthorized - Invalid Token" });
         }
 
         const user = await User.findById(decoded.userId).select("-password");  //we are finding the user in thee database and delselecting the password so that password is not passes by mistake(- minus means deselct)
