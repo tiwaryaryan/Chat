@@ -73,6 +73,7 @@ const verifyJWT = async (req, res, next) => {
 
         if (!decoded) {
             return res.status(401).json({ message: "Unauthorized - Invalid Token" });
+            console.log("Unauthorized - Invalid Token");
         }
 
         const user = await User.findById(decoded.userId).select("-password");  //we are finding the user in thee database and delselecting the password so that password is not passes by mistake(- minus means deselct)
