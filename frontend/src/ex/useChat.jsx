@@ -17,7 +17,9 @@ export const useChat = create((set, get) => ({
       set({ users: res.data });
       console.log(res.data);
     } catch (error) {
-      toast.error(error.response.data.message);
+      // toast.error(error.response.data.message);
+       console.error("Error fetching users: ", error.response?.data || error.message);
+    toast.error(error.response?.data?.message || "Something went wrong!");
     } finally {
       set({ isUsersLoading: false });
     }
