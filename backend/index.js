@@ -54,8 +54,7 @@ const generatetoken = (userId, res) => {
         sameSite: "Strict",  //prevents CSRF attacks
     });
 
-     console.log(token);
-     console.log(res.cookie);
+     console.log("token1: " , token);
 };
 
 const verifyJWT = async (req, res, next) => {
@@ -63,10 +62,11 @@ const verifyJWT = async (req, res, next) => {
     try {
 
         const token = req.cookies.jwt;
-        console.log("token: " , token);
+        console.log("token2: " , token);
 
         if (!token) {
             return res.status(401).json({ error: "No access token" })
+            console.log("no token sirrr!")
         }
 
         const decoded = jwt.verify(token, process.env.MY_JWT_ACCESS);  //decoded contains the payload that has userid with it
